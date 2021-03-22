@@ -26,7 +26,9 @@ app.use("/api", newsRoutes);
 app.use("/api", eventsRoutes);
 app.use("/api", uploadsRoutes);
 
-app.listen(4000, () => {
+const port = process.env.PORT;
+
+app.listen(port, () => {
   //Se levanta el servidor escuchando en el puerto 4000
-  console.log("Started on PORT 4000");
+  console.log(`Started on PORT ${port}`);
 });
