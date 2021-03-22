@@ -26,7 +26,9 @@ app.use("/api", newsRoutes);
 app.use("/api", eventsRoutes);
 app.use("/api", uploadsRoutes);
 
-const port = process.env.PORT;
+let port = 4000; // definicion del puerto
+
+if (process.env.PORT) port = process.env.PORT;
 
 app.listen(port, () => {
   //Se levanta el servidor escuchando en el puerto 4000
